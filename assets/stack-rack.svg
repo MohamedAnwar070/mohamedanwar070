@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title">
+  <title id="title">Runtime stack rack elevation for anwr-01 — five layers built and run by one engineer: interface (React, Angular, TypeScript, Tailwind), services (Node, NestJS, FastAPI, Django, Spring), data (PostgreSQL, MySQL, MongoDB, pgvector), intelligence (Flowise, RAG, LLM, MCP tools), delivery (Docker, Kubernetes, Git, Linux).</title>
+  <style>
+    .mono { font-family: Consolas, 'SF Mono', Menlo, 'Courier New', monospace; }
+    .sans { font-family: 'Segoe UI', -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .micro { font-size: 16px; letter-spacing: 2px; fill: #7D8FA8; }
+    .cap { font-size: 17px; fill: #9DB0C9; }
+    .uid { font-size: 16px; letter-spacing: 2px; fill: #5E7290; }
+    .uname { font-size: 18px; fill: #E9F1FA; }
+    .urole { font-size: 16px; fill: #5E7290; }
+    .chip-t { font-size: 16px; fill: #9DB0C9; text-anchor: middle; }
+    .led { animation: pulse 2.8s ease-in-out infinite alternate; }
+    .p0 { animation-delay: 0s; }
+    .p1 { animation-delay: 0.35s; }
+    .p2 { animation-delay: 0.7s; }
+    .p3 { animation-delay: 1.05s; }
+    .p4 { animation-delay: 1.4s; }
+    .p5 { animation-delay: 1.75s; }
+    .p6 { animation-delay: 2.1s; }
+    .pkt { animation: bus-run 9s linear infinite; }
+    @keyframes pulse { from { opacity: 0.55; } to { opacity: 1; } }
+    @keyframes bus-run { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .m { opacity: 0; }
+    }
+  </style>
+  <defs>
+    <pattern id="dot-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#9DB0C9" fill-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <g id="card">
+    <rect x="0" y="0" width="1200" height="500" rx="12" fill="#05080F"/>
+    <rect x="0" y="0" width="1200" height="500" rx="12" fill="url(#dot-grid)"/>
+    <rect x="0.5" y="0.5" width="1199" height="499" rx="11.5" fill="none" stroke="#1D2A40" stroke-width="1"/>
+  </g>
+
+  <g id="title-row">
+    <text class="mono micro" x="32" y="44">RUNTIME STACK — RACK ELEVATION anwr-01</text>
+    <text class="sans cap" x="1168" y="44" text-anchor="end">one engineer, every layer</text>
+  </g>
+
+  <g id="rack">
+    <g id="u5-interface">
+      <rect x="32" y="64" width="1080" height="72" rx="12" fill="#0A101C" stroke="#1D2A40" stroke-width="1"/>
+      <text class="mono uid" x="52" y="86">U5</text>
+      <text class="mono uname" x="52" y="107">INTERFACE</text>
+      <text class="sans urole" x="52" y="125">what users touch</text>
+      <g id="u5-chips">
+        <rect x="248" y="83" width="102" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p2" cx="269" cy="100" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="306" y="105.5">React</text>
+        <rect x="362" y="83" width="122" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p5" cx="383" cy="100" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="430" y="105.5">Angular</text>
+        <rect x="496" y="83" width="152" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p0" cx="517" cy="100" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="579" y="105.5">TypeScript</text>
+        <rect x="660" y="83" width="132" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p3" cx="681" cy="100" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="733" y="105.5">Tailwind</text>
+      </g>
+    </g>
+
+    <g id="u4-services">
+      <rect x="32" y="150" width="1080" height="72" rx="12" fill="#0A101C" stroke="#1D2A40" stroke-width="1"/>
+      <text class="mono uid" x="52" y="172">U4</text>
+      <text class="mono uname" x="52" y="193">SERVICES</text>
+      <text class="sans urole" x="52" y="211">business logic + APIs</text>
+      <g id="u4-chips">
+        <rect x="248" y="169" width="92" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p4" cx="269" cy="186" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="301" y="191.5">Node</text>
+        <rect x="352" y="169" width="112" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p1" cx="373" cy="186" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="415" y="191.5">NestJS</text>
+        <rect x="476" y="169" width="122" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p6" cx="497" cy="186" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="544" y="191.5">FastAPI</text>
+        <rect x="610" y="169" width="112" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p2" cx="631" cy="186" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="673" y="191.5">Django</text>
+        <rect x="734" y="169" width="112" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p0" cx="755" cy="186" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="797" y="191.5">Spring</text>
+      </g>
+    </g>
+
+    <g id="u3-data">
+      <rect x="32" y="236" width="1080" height="72" rx="12" fill="#0A101C" stroke="#1D2A40" stroke-width="1"/>
+      <text class="mono uid" x="52" y="258">U3</text>
+      <text class="mono uname" x="52" y="279">DATA</text>
+      <text class="sans urole" x="52" y="297">state + retrieval</text>
+      <g id="u3-chips">
+        <rect x="248" y="255" width="152" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p5" cx="269" cy="272" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="331" y="277.5">PostgreSQL</text>
+        <rect x="412" y="255" width="102" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p3" cx="433" cy="272" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="470" y="277.5">MySQL</text>
+        <rect x="526" y="255" width="122" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p1" cx="547" cy="272" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="594" y="277.5">MongoDB</text>
+        <rect x="660" y="255" width="132" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p6" cx="681" cy="272" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="733" y="277.5">pgvector</text>
+      </g>
+    </g>
+
+    <g id="u2-intelligence">
+      <rect x="32" y="322" width="1080" height="72" rx="12" fill="#0A101C" stroke="#1D2A40" stroke-width="1"/>
+      <rect x="33" y="338" width="3" height="40" rx="1.5" fill="#FFB454"/>
+      <text class="mono uid" x="52" y="344">U2</text>
+      <text class="mono uname" x="52" y="365">INTELLIGENCE</text>
+      <text class="sans urole" x="52" y="383">the applied-AI layer</text>
+      <g id="u2-chips">
+        <rect x="248" y="341" width="122" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p0" cx="269" cy="358" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="316" y="363.5">Flowise</text>
+        <rect x="382" y="341" width="82" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p4" cx="403" cy="358" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="430" y="363.5">RAG</text>
+        <rect x="476" y="341" width="82" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p2" cx="497" cy="358" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="524" y="363.5">LLM</text>
+        <rect x="570" y="341" width="142" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p5" cx="591" cy="358" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="648" y="363.5">MCP tools</text>
+      </g>
+    </g>
+
+    <g id="u1-delivery">
+      <rect x="32" y="408" width="1080" height="72" rx="12" fill="#0A101C" stroke="#1D2A40" stroke-width="1"/>
+      <text class="mono uid" x="52" y="430">U1</text>
+      <text class="mono uname" x="52" y="451">DELIVERY</text>
+      <text class="sans urole" x="52" y="469">ship + run</text>
+      <g id="u1-chips">
+        <rect x="248" y="427" width="112" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p3" cx="269" cy="444" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="311" y="449.5">Docker</text>
+        <rect x="372" y="427" width="152" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p6" cx="393" cy="444" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="455" y="449.5">Kubernetes</text>
+        <rect x="536" y="427" width="82" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p1" cx="557" cy="444" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="584" y="449.5">Git</text>
+        <rect x="630" y="427" width="102" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <circle class="led p4" cx="651" cy="444" r="3" fill="#3DDC97"/>
+        <text class="mono chip-t" x="688" y="449.5">Linux</text>
+      </g>
+    </g>
+  </g>
+
+  <g id="bus-lane">
+    <path d="M1112 100 H1140 M1112 186 H1140 M1112 272 H1140 M1112 358 H1140 M1112 444 H1140"
+      fill="none" stroke="#1D2A40" stroke-width="1.5" stroke-dasharray="2 6" stroke-linecap="round"/>
+    <path d="M1140 100 V444"
+      fill="none" stroke="#1D2A40" stroke-width="1.5" stroke-dasharray="2 6" stroke-linecap="round"/>
+    <circle cx="1140" cy="100" r="3" fill="#05080F" stroke="#2B3D5C" stroke-width="1"/>
+    <circle cx="1140" cy="186" r="3" fill="#05080F" stroke="#2B3D5C" stroke-width="1"/>
+    <circle cx="1140" cy="272" r="3" fill="#05080F" stroke="#2B3D5C" stroke-width="1"/>
+    <circle cx="1140" cy="358" r="3" fill="#05080F" stroke="#2B3D5C" stroke-width="1"/>
+    <circle cx="1140" cy="444" r="3" fill="#05080F" stroke="#2B3D5C" stroke-width="1"/>
+    <path class="pkt m" d="M1140 100 V444" pathLength="100"
+      fill="none" stroke="#22D3EE" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="0.1 99.9" stroke-dashoffset="100"/>
+  </g>
+</svg>

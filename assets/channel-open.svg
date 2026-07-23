@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" role="img" aria-labelledby="t">
+  <title id="t">Comms channel open — contact footer for Mohamed Anwar: portfolio, LinkedIn, and email routes, open to full-time roles.</title>
+  <defs>
+    <pattern id="dot-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#22D3EE" fill-opacity="0.06"/>
+    </pattern>
+    <linearGradient id="edge-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset="0.05" stop-color="#fff"/>
+      <stop offset="0.95" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <mask id="wave-mask" maskUnits="userSpaceOnUse" x="32" y="56" width="1136" height="64">
+      <rect x="32" y="56" width="1136" height="64" fill="url(#edge-fade)"/>
+    </mask>
+    <radialGradient id="led-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3DDC97" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#3DDC97" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .mono  { font-family: Consolas, 'SF Mono', Menlo, 'Courier New', monospace; }
+    .sans  { font-family: 'Segoe UI', -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .micro { font-size: 16px; letter-spacing: 2px; }
+    .led   { animation: pulse 2.8s ease-in-out infinite alternate; }
+    .wave  { animation: drift 6s linear infinite; }
+    @keyframes pulse { from { opacity: 0.55; } to { opacity: 1; } }
+    @keyframes drift { from { transform: translateX(0); } to { transform: translateX(-120px); } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .m { opacity: 0; }
+    }
+  </style>
+
+  <g id="card">
+    <rect x="1" y="1" width="1198" height="208" rx="12" fill="#05080F" stroke="#1D2A40" stroke-width="1"/>
+    <rect x="1" y="1" width="1198" height="208" rx="12" fill="url(#dot-grid)"/>
+  </g>
+
+  <g id="hud-brackets" fill="none" stroke="#2B3D5C" stroke-width="1.5">
+    <path d="M 14 26 L 14 14 L 26 14"/>
+    <path d="M 1174 14 L 1186 14 L 1186 26"/>
+    <path d="M 14 184 L 14 196 L 26 196"/>
+    <path d="M 1174 196 L 1186 196 L 1186 184"/>
+  </g>
+
+  <g id="header">
+    <circle cx="40" cy="28" r="14" fill="url(#led-glow)"/>
+    <circle class="led" cx="40" cy="28" r="4" fill="#3DDC97"/>
+    <text class="mono micro" x="56" y="33" fill="#7D8FA8">COMMS // CHANNEL OPEN</text>
+  </g>
+
+  <g id="oscilloscope" mask="url(#wave-mask)" opacity="0.2">
+    <path class="wave" fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round"
+      d="M -120 84
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0
+         q 30 -32 60 0 q 30 32 60 0"/>
+  </g>
+
+  <g id="message" text-anchor="middle">
+    <text class="sans" x="600" y="88" font-size="26" font-weight="600" fill="#E9F1FA">Have a product, platform, or AI workflow to build?</text>
+    <text class="sans" x="600" y="116" font-size="17" fill="#9DB0C9">Open to full-time roles and conversations about meaningful software.</text>
+  </g>
+
+  <g id="endpoints">
+    <g id="route-portfolio">
+      <rect x="259" y="132" width="232" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+      <path d="M 280 146 L 283 149 L 280 152 L 277 149 Z" fill="#22D3EE"/>
+      <text class="mono" x="382" y="154" font-size="16" text-anchor="middle" fill="#9DB0C9">route://portfolio</text>
+    </g>
+    <g id="route-linkedin">
+      <rect x="511" y="132" width="220" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+      <path d="M 532 146 L 535 149 L 532 152 L 529 149 Z" fill="#22D3EE"/>
+      <text class="mono" x="628" y="154" font-size="16" text-anchor="middle" fill="#9DB0C9">route://linkedin</text>
+    </g>
+    <g id="route-email">
+      <rect x="751" y="132" width="190" height="34" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+      <path d="M 772 146 L 775 149 L 772 152 L 769 149 Z" fill="#22D3EE"/>
+      <text class="mono" x="853" y="154" font-size="16" text-anchor="middle" fill="#9DB0C9">route://email</text>
+    </g>
+  </g>
+
+  <g id="sign-off">
+    <text class="mono" x="1168" y="185" font-size="16" text-anchor="end" fill="#5E7290">// building useful systems, one clean boundary at a time</text>
+  </g>
+</svg>

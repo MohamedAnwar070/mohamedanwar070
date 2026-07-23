@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-labelledby="tl-title">
+  <title id="tl-title">Deployment history timeline for Mohamed Anwar — v0.1: B.E. Computer Science, Al-Ameen Engg College, 2020–2024, CGPA 7.5/10; v0.9: Trainee and Intern at Aruvi Infotech, Jul 2024–May 2025, Django and JS in production; v1.0: Full Stack Developer at Arffy Technologies, Jun 2025; HEAD: present, shipping — ongoing.</title>
+  <defs>
+    <pattern id="dot-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.75" fill="#E9F1FA" opacity="0.06"/>
+    </pattern>
+    <pattern id="tick-ruler" x="40" y="158" width="40" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0.5 0V12 M8.5 0V6 M16.5 0V6 M24.5 0V6 M32.5 0V6" stroke="#1D2A40" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .mono { font-family: Consolas, 'SF Mono', Menlo, 'Courier New', monospace; }
+    .sans { font-family: 'Segoe UI', -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .d { animation: draw 1.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .f { animation: fadein 1.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .s1 { animation-delay: 0.15s; }
+    .s2 { animation-delay: 0.3s; }
+    .s3 { animation-delay: 0.45s; }
+    .s4 { animation-delay: 0.6s; }
+    .s5 { animation-delay: 0.75s; }
+    .s6 { animation-delay: 0.9s; }
+    .crawl { animation: crawl 8s linear infinite; }
+    .pulse { animation: pulse 2.8s ease-in-out infinite alternate; }
+    @keyframes draw { from { stroke-dashoffset: 100; } }
+    @keyframes fadein { from { opacity: 0; } }
+    @keyframes crawl { to { stroke-dashoffset: -14; } }
+    @keyframes pulse { from { opacity: 0.55; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .m { opacity: 0; }
+    }
+  </style>
+
+  <g id="card">
+    <rect x="0.5" y="0.5" width="1199" height="259" rx="12" fill="#05080F" stroke="#1D2A40" stroke-width="1"/>
+    <rect x="0.5" y="0.5" width="1199" height="259" rx="12" fill="url(#dot-grid)"/>
+  </g>
+
+  <g id="header">
+    <text class="mono" x="32" y="44" font-size="16" letter-spacing="2" fill="#7D8FA8">DEPLOYMENT HISTORY</text>
+    <text class="sans" x="1168" y="44" font-size="17" fill="#9DB0C9" text-anchor="end">experience &amp; education</text>
+  </g>
+
+  <g id="commit-line">
+    <line class="d" x1="40" y1="150" x2="953" y2="150" stroke="#2B3D5C" stroke-width="1.5" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+  </g>
+
+  <g id="ruler" class="f s5">
+    <rect x="40" y="158" width="1096" height="12" fill="url(#tick-ruler)"/>
+  </g>
+
+  <g id="tag-v01" class="f s1">
+    <line class="d s1" x1="150" y1="122" x2="150" y2="146" stroke="#2B3D5C" stroke-width="1" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+    <rect class="d s1" x="40" y="64" width="524" height="58" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+    <text class="mono" x="302" y="88" font-size="17" fill="#E9F1FA" text-anchor="middle">B.E. Computer Science · Al-Ameen Engg College</text>
+    <text class="sans" x="302" y="110" font-size="16" fill="#9DB0C9" text-anchor="middle">2020–2024 · CGPA 7.5/10</text>
+    <circle cx="150" cy="150" r="4" fill="#22D3EE"/>
+    <text class="mono" x="162" y="141" font-size="16" fill="#22D3EE">v0.1</text>
+  </g>
+
+  <g id="tag-v09" class="f s2">
+    <line class="d s2" x1="440" y1="156" x2="440" y2="178" stroke="#2B3D5C" stroke-width="1" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+    <rect class="d s2" x="210" y="178" width="460" height="58" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+    <text class="mono" x="440" y="202" font-size="17" fill="#E9F1FA" text-anchor="middle">Trainee &amp; Intern · Aruvi Infotech</text>
+    <text class="sans" x="440" y="224" font-size="16" fill="#9DB0C9" text-anchor="middle">Jul 2024–May 2025 · Django + JS in production</text>
+    <circle cx="440" cy="150" r="4" fill="#22D3EE"/>
+    <text class="mono" x="452" y="141" font-size="16" fill="#22D3EE">v0.9</text>
+  </g>
+
+  <g id="tag-v10" class="f s3">
+    <line class="d s3" x1="830" y1="122" x2="830" y2="146" stroke="#2B3D5C" stroke-width="1" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+    <rect class="d s3" x="590" y="64" width="480" height="58" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+    <text class="mono" x="830" y="88" font-size="17" fill="#E9F1FA" text-anchor="middle">Full Stack Developer · Arffy Technologies</text>
+    <text class="sans" x="830" y="110" font-size="16" fill="#9DB0C9" text-anchor="middle">Jun 2025</text>
+    <circle cx="830" cy="150" r="4" fill="#22D3EE"/>
+    <text class="mono" x="842" y="141" font-size="16" fill="#22D3EE">v1.0</text>
+  </g>
+
+  <g id="head-marker" class="f s4">
+    <line x1="960" y1="157" x2="960" y2="176" stroke="#FFB454" stroke-width="1" opacity="0.7"/>
+    <g class="pulse">
+      <circle cx="960" cy="150" r="5" fill="#FFB454"/>
+      <circle cx="960" cy="150" r="9" fill="none" stroke="#FFB454" stroke-width="1" stroke-opacity="0.35"/>
+    </g>
+    <text class="mono" x="960" y="194" font-size="17" fill="#FFB454" text-anchor="middle">HEAD → present · shipping</text>
+  </g>
+
+  <g id="ongoing" class="f s6">
+    <line class="crawl" x1="967" y1="150" x2="1124" y2="150" stroke="#2B3D5C" stroke-width="0.75" stroke-dasharray="3 4" stroke-dashoffset="0"/>
+    <polyline points="1122,142 1130,150 1122,158" fill="none" stroke="#2B3D5C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="mono" x="1160" y="138" font-size="16" letter-spacing="2" fill="#7D8FA8" text-anchor="end">ONGOING</text>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 170" role="img" aria-labelledby="mu-title">
+  <title id="mu-title">Key metrics for Mohamed Anwar — six-plus production applications shipped, six domains served, and end-to-end ownership from UI to deployment.</title>
+  <defs>
+    <pattern id="dotgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.5" fill="#E9F1FA" fill-opacity="0.06"/>
+    </pattern>
+    <radialGradient id="gaugeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <style>
+    .mono  { font-family: Consolas, 'SF Mono', Menlo, 'Courier New', monospace; }
+    .sans  { font-family: 'Segoe UI', -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .micro { font-size: 16px; letter-spacing: 2px; fill: #7D8FA8; }
+    .cap   { font-size: 17px; fill: #9DB0C9; }
+    .fig   { font-size: 30px; fill: #E9F1FA; }
+    .arc   { stroke: #22D3EE; stroke-width: 2.5; stroke-linecap: round; fill: none;
+             animation: draw 1.6s cubic-bezier(0.22,1,0.36,1) both; }
+    .track { stroke: #1D2A40; stroke-width: 2; fill: none; }
+    .led   { fill: #3DDC97; animation: pulse 2.8s ease-in-out infinite alternate; }
+    .d1 { animation-delay: 0s; }
+    .d2 { animation-delay: 0.2s; }
+    .d3 { animation-delay: 0.4s; }
+    .p1 { animation-delay: 0s; }
+    .p2 { animation-delay: 0.4s; }
+    .p3 { animation-delay: 0.9s; }
+    @keyframes draw  { from { stroke-dashoffset: 100; } }
+    @keyframes pulse { from { opacity: 0.55; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .m { opacity: 0; }
+    }
+  </style>
+
+  <g id="card">
+    <rect x="0.5" y="0.5" width="1199" height="169" rx="12" fill="#05080F" stroke="#1D2A40"/>
+    <rect x="0.5" y="0.5" width="1199" height="169" rx="12" fill="url(#dotgrid)"/>
+  </g>
+
+  <g id="panel-shipped">
+    <rect x="32.5" y="32.5" width="368" height="106" rx="12" fill="#0F1726" stroke="#1D2A40"/>
+    <circle cx="92" cy="85" r="46" fill="url(#gaugeGlow)"/>
+    <path class="track" d="M 67.96 109.04 A 34 34 0 1 1 116.04 109.04"/>
+    <path class="arc d1" d="M 67.96 109.04 A 34 34 0 1 1 116.04 109.04" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+    <text class="mono fig" x="92" y="95" text-anchor="middle">06+</text>
+    <text class="mono micro" x="150" y="64">PROD APPS SHIPPED</text>
+    <text class="sans cap" x="150" y="91">production applications</text>
+    <text class="sans cap" x="150" y="113">delivered</text>
+    <circle class="led p1" cx="376" cy="48" r="3.5"/>
+  </g>
+
+  <g id="panel-domains">
+    <rect x="416.5" y="32.5" width="368" height="106" rx="12" fill="#0F1726" stroke="#1D2A40"/>
+    <circle cx="476" cy="85" r="46" fill="url(#gaugeGlow)"/>
+    <path class="track" d="M 451.96 109.04 A 34 34 0 1 1 500.04 109.04"/>
+    <path class="arc d2" d="M 451.96 109.04 A 34 34 0 1 1 500.04 109.04" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+    <text class="mono fig" x="476" y="95" text-anchor="middle">06</text>
+    <text class="mono micro" x="534" y="64">DOMAINS SERVED</text>
+    <text class="sans cap" x="534" y="91">hiring · edu · health</text>
+    <text class="sans cap" x="534" y="113">AI · IoT · docs</text>
+    <circle class="led p2" cx="760" cy="48" r="3.5"/>
+  </g>
+
+  <g id="panel-ownership">
+    <rect x="800.5" y="32.5" width="368" height="106" rx="12" fill="#0F1726" stroke="#1D2A40"/>
+    <circle cx="860" cy="85" r="46" fill="url(#gaugeGlow)"/>
+    <path class="track" d="M 835.96 109.04 A 34 34 0 1 1 884.04 109.04"/>
+    <path class="arc d3" d="M 835.96 109.04 A 34 34 0 1 1 884.04 109.04" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"/>
+    <text class="mono fig" x="860" y="95" text-anchor="middle">E2E</text>
+    <text class="mono micro" x="918" y="64">OWNERSHIP SPAN</text>
+    <text class="sans cap" x="918" y="91">UI · APIs · data</text>
+    <text class="sans cap" x="918" y="113">AI · deployment</text>
+    <circle class="led p3" cx="1144" cy="48" r="3.5"/>
+  </g>
+</svg>

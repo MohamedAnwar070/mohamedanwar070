@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img">
+  <title>svc://rag-core — live request trace: how a question becomes a grounded answer (query → embed → vector search → context → LLM → answer), wired into real products.</title>
+  <defs>
+    <pattern id="dotgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#9DB0C9"/>
+    </pattern>
+    <pattern id="tickruler" x="32" y="244" width="40" height="16" patternUnits="userSpaceOnUse">
+      <path d="M0.5 0 V14 M8.5 0 V8 M16.5 0 V8 M24.5 0 V8 M32.5 0 V8" stroke="#1D2A40" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="sweepfade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .mono { font-family: Consolas, 'SF Mono', Menlo, 'Courier New', monospace; }
+    .sans { font-family: 'Segoe UI', -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .lbl  { font-size: 16px; letter-spacing: 2px; fill: #7D8FA8; }
+    .sub  { font-size: 18px; fill: #9DB0C9; }
+    .sid  { font-size: 16px; fill: #5E7290; }
+    .ttl  { font-size: 18px; fill: #E9F1FA; }
+    .tech { font-size: 16px; fill: #7D8FA8; }
+    .cap  { font-size: 17px; fill: #9DB0C9; }
+    .pkt {
+      stroke-dasharray: 3 97;
+      stroke-dashoffset: 0;
+      animation: flow 8s linear infinite;
+    }
+    .pkt2 { animation-delay: -4s; }
+    @keyframes flow { to { stroke-dashoffset: -100; } }
+    #sweep {
+      transform-origin: 866px 140px;
+      animation: sweep 12s linear infinite;
+    }
+    @keyframes sweep { to { transform: rotate(360deg); } }
+    .row  { animation: matchrow 3.6s ease-in-out infinite; }
+    .row2 { animation-delay: 0.5s; }
+    .row3 { animation-delay: 1s; }
+    @keyframes matchrow {
+      0%, 100% { opacity: 0.4; }
+      40%, 60% { opacity: 1; }
+    }
+    #playhead { animation: scan 10s linear infinite; }
+    @keyframes scan {
+      0%   { transform: translateX(0);      opacity: 0.4; }
+      12%  { opacity: 1; }
+      88%  { opacity: 1; }
+      100% { transform: translateX(1136px); opacity: 0.4; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .m { opacity: 0; }
+    }
+  </style>
+
+  <g id="card">
+    <rect x="0.5" y="0.5" width="1199" height="339" rx="12" fill="#05080F" stroke="#1D2A40" stroke-width="1"/>
+    <rect x="1" y="1" width="1198" height="338" rx="11" fill="url(#dotgrid)" opacity="0.06"/>
+  </g>
+
+  <g id="header">
+    <text class="mono lbl" x="32" y="46">svc://rag-core — LIVE REQUEST TRACE</text>
+    <text class="sans sub" x="1168" y="46" text-anchor="end">How a question becomes a grounded answer</text>
+    <line x1="32" y1="70.5" x2="1168" y2="70.5" stroke="#1D2A40" stroke-width="1"/>
+  </g>
+
+  <g id="lane">
+    <path id="conduit" d="M32 140 H1168" fill="none" stroke="#1D2A40" stroke-width="1.5" stroke-dasharray="2 6" stroke-linecap="round"/>
+    <path class="m pkt"      d="M32 140 H1168" pathLength="100" fill="none" stroke="#22D3EE" stroke-width="3" stroke-linecap="round"/>
+    <path class="m pkt pkt2" d="M32 140 H1168" pathLength="100" fill="none" stroke="#22D3EE" stroke-width="3" stroke-linecap="round"/>
+
+    <g id="stages">
+      <g id="stg-01">
+        <rect x="32" y="96" width="158" height="88" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <text class="mono sid"  x="111" y="120" text-anchor="middle">stg/01</text>
+        <text class="mono ttl"  x="111" y="146" text-anchor="middle">QUERY</text>
+        <text class="mono tech" x="111" y="170" text-anchor="middle">FastAPI</text>
+      </g>
+      <g id="stg-02">
+        <rect x="210" y="96" width="158" height="88" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <text class="mono sid"  x="289" y="120" text-anchor="middle">stg/02</text>
+        <text class="mono ttl"  x="289" y="146" text-anchor="middle">EMBED</text>
+        <text class="mono tech" x="289" y="170" text-anchor="middle">embeddings</text>
+      </g>
+      <g id="stg-03">
+        <rect x="388" y="96" width="158" height="88" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <text class="mono sid"  x="467" y="112" text-anchor="middle">stg/03</text>
+        <text class="mono ttl"  x="446" y="133" text-anchor="middle">VECTOR</text>
+        <text class="mono ttl"  x="446" y="153" text-anchor="middle">SEARCH</text>
+        <text class="mono tech" x="467" y="173" text-anchor="middle">pgvector</text>
+        <g id="db-cylinder">
+          <path d="M503 124 v32 a14 5 0 0 0 28 0 v-32" fill="#0A101C" stroke="#7D8FA8" stroke-width="1"/>
+          <ellipse cx="517" cy="124" rx="14" ry="5" fill="#0A101C" stroke="#7D8FA8" stroke-width="1"/>
+          <rect class="row"      x="507" y="132"   width="20" height="4" rx="2" fill="#22D3EE"/>
+          <rect class="row row2" x="507" y="139.5" width="13" height="4" rx="2" fill="#22D3EE"/>
+          <rect class="row row3" x="507" y="147"   width="17" height="4" rx="2" fill="#22D3EE"/>
+        </g>
+      </g>
+      <g id="stg-04">
+        <rect x="566" y="96" width="158" height="88" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <text class="mono sid"  x="645" y="120" text-anchor="middle">stg/04</text>
+        <text class="mono ttl"  x="645" y="146" text-anchor="middle">CONTEXT</text>
+        <text class="mono tech" x="645" y="170" text-anchor="middle">MCP tools</text>
+      </g>
+      <g id="stg-05">
+        <rect x="744" y="96" width="158" height="88" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <text class="mono sid"  x="798" y="120" text-anchor="middle">stg/05</text>
+        <text class="mono ttl"  x="798" y="146" text-anchor="middle">LLM</text>
+        <text class="mono tech" x="798" y="170" text-anchor="middle">inference</text>
+        <g id="radar">
+          <circle cx="866" cy="140" r="18" fill="#0A101C" stroke="#1D2A40" stroke-width="1"/>
+          <circle cx="866" cy="140" r="10" fill="none" stroke="#1D2A40" stroke-width="1"/>
+          <path id="sweep" d="M866 140 L866 124 A16 16 0 0 1 879.86 132 Z" fill="url(#sweepfade)"/>
+          <circle cx="866" cy="140" r="1.5" fill="#22D3EE" opacity="0.7"/>
+        </g>
+      </g>
+      <g id="stg-06">
+        <rect x="922" y="96" width="158" height="88" rx="6" fill="#0F1726" stroke="#1D2A40" stroke-width="1"/>
+        <text class="mono sid"  x="1001" y="120" text-anchor="middle">stg/06</text>
+        <text class="mono ttl"  x="1001" y="146" text-anchor="middle">ANSWER</text>
+        <text class="mono tech" x="1001" y="170" text-anchor="middle">response</text>
+      </g>
+    </g>
+  </g>
+
+  <g id="ruler">
+    <line x1="32" y1="243.5" x2="1168" y2="243.5" stroke="#1D2A40" stroke-width="1"/>
+    <rect x="32" y="244" width="1136" height="16" fill="url(#tickruler)"/>
+  </g>
+
+  <g id="playhead" class="m">
+    <circle cx="32" cy="232" r="3" fill="#FFB454"/>
+    <line x1="32" y1="236" x2="32" y2="262" stroke="#FFB454" stroke-width="2"/>
+  </g>
+
+  <g id="caption">
+    <text class="sans cap" x="600" y="298" text-anchor="middle">retrieve → ground → generate — wired into real products, not demos.</text>
+  </g>
+</svg>
